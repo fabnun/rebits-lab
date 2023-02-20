@@ -65,3 +65,5 @@ Ejecutar esto, para igualar la versión de Chrome con la de Dusk:
 ```bash
 php artisan dusk:chrome-driver 109
 ```
+
+Nota: Para ejecutar las pruebas debe estar en ejecución el servidor de Laravel.
