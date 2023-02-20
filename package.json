@@ -1,6 +1,11 @@
 {
     "private": true,
     "scripts": {
+        "install": "composer install --ignore-platform-reqs",
+        "migrate": "php artisan migrate",
+        "encryption": "php artisan key:generate",
+        "serve": "php artisan serve",
+        "test": "clear && php artisan test",
         "dev": "vite",
         "build": "vite build"
     },
