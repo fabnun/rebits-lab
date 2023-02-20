@@ -2,10 +2,11 @@
 
 Para este laboratorio usé Xampp para contar con PHP, MySQL, PHPMyAdmin y Apache. Tambien instalé Composer y Laravel.
 
-Clonar el proyecto desde github:
+Clonar el proyecto desde github e ingresar al directorio:
 
 ```bash
 git clone https://github.com/fabnun/rebits-lab.git
+cd rebits-lab
 ```
 
 Instalar las dependencias:
@@ -70,3 +71,22 @@ Ejecutar esto, para igualar la versión de Chrome con la de Dusk:
 ```bash
 php artisan dusk:chrome-driver 109
 ```
+
+El resultado de las pruebas es el siguiente:
+
+```bash
+1) Tests\Browser\ExampleTest::testBasicExample
+Did not see expected text [Laravel] within element [body].
+Failed asserting that false is true.
+
+G:\DRIVE PGOL\proyectos\larabel\rebits-lab\vendor\laravel\dusk\src\Concerns\MakesAssertions.php:179
+G:\DRIVE PGOL\proyectos\larabel\rebits-lab\vendor\laravel\dusk\src\Concerns\MakesAssertions.php:152
+G:\DRIVE PGOL\proyectos\larabel\rebits-lab\tests\Browser\ExampleTest.php:18
+G:\DRIVE PGOL\proyectos\larabel\rebits-lab\vendor\laravel\dusk\src\Concerns\ProvidesBrowser.php:70
+G:\DRIVE PGOL\proyectos\larabel\rebits-lab\tests\Browser\ExampleTest.php:16
+
+FAILURES!
+Tests: 2, Assertions: 8, Failures: 1.
+```
+
+El error que aparece es del archivo de pruebas que se genera en la instalación de dusk, hay que eliminar ese archivo (./test/Browser/ExampleTest.php) para que solo ejecute las pruebas de ./test/Browser/RebitsTest.php
