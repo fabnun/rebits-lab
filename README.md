@@ -4,7 +4,9 @@ Para este laboratorio se uso Xampp para contar con PHP, MySQL, PHPMyAdmin y Apac
 
 Para clonar el proyecto desde github, ejecutar el siguiente comando:
 
+```bash
 git clone https://github.com/fabnun/rebits-lab.git
+```
 
 Luego hay que editar el archivo .env con los datos de conexión a la base de datos. En mi caso usare MySQL localmente y la base de datos se llamará rebits_lab.
 
