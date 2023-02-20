@@ -5,7 +5,7 @@
         "migrate": "php artisan migrate",
         "encryption": "php artisan key:generate",
         "serve": "php artisan serve",
-        "test": "clear && php artisan test",
+        "test": "clear && php artisan dusk",
         "dev": "vite",
         "build": "vite build"
     },

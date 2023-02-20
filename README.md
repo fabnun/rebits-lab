@@ -12,6 +12,7 @@ Instalar las dependencias:
 
 ```bash
 composer install --ignore-platform-reqs
+composer require --dev laravel/dusk --ignore-platform-reqs
 ```
 
 Editar el archivo .env con los datos de conexión a la base de datos. En mi caso usare MySQL localmente y la base de datos se llamará rebits_lab.
@@ -52,8 +53,29 @@ Ejecutar el servidor:
 php artisan serve
 ```
 
-Ejecutar los test:
+# Pruebas funcionales con Dusk
+
+Instalar Dusk:
 
 ```bash
-php artisan test
+composer require --dev laravel/dusk --ignore-platform-reqs
+php artisan dusk:install
+```
+
+Ejecutar las pruebas:
+
+```bash
+php artisan dusk
+```
+
+Si lanza un error del tipo:
+
+```error
+Current browser version is 109.0.5414.122 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+```
+
+Ejecutar esto, para igualar la versión de Chrome con la de Dusk:
+
+```bash
+php artisan dusk:chrome-driver 109
 ```
