@@ -14,7 +14,7 @@ class UsuarioController extends Controller
     public function index()
     {
         $usuarios = Usuario::all();
-        return view('usuarios.index', ['usuarios' => $usuarios]);
+        return view('usuarios.index', ['usuarios' => $usuarios->reverse()]);
     }
 
     public function create()

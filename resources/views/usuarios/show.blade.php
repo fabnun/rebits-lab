@@ -17,7 +17,12 @@
                             <strong>Nombre: </strong>{{ $usuario->nombre }}</p>
                         <p><strong>Apellidos: </strong>{{ $usuario->apellidos }}</p>
                         <p><strong>Correo electrónico: </strong>{{ $usuario->correo}}</p>
-                    
+                        <p><strong>Vehículos:</strong></p>
+                        <ul>
+                            @foreach($usuario->vehiculos as $vehiculo)
+                                <a title="Ver" href="{{ route('vehiculos.show', $vehiculo->id) }}"><li>{{ $vehiculo->marca }} {{ $vehiculo->modelo }} ({{ $vehiculo->anio }})</li></a>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>

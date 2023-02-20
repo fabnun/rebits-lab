@@ -6,14 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Usuario extends Model
+class Vehiculo extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
-    public function vehiculos(){
-        return $this->hasMany('App\Models\Vehiculo', 'dueno_id');
+    public function dueno() {
+        return $this->belongsTo('App\Models\Usuario');
     }
 
- 
+    public function historicos() {
+        return $this->hasMany('App\Models\Historico');
+    }
 }

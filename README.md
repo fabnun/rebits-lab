@@ -1,6 +1,6 @@
 # REBITS LAB
 
-Para este laboratorio use Xampp para contar con PHP, MySQL, PHPMyAdmin y Apache. Luego instalare Composer para instalar Laravel.
+Para este laboratorio se uso Xampp para contar con PHP, MySQL, PHPMyAdmin y Apache. Tambien se instalo Composer y Larabel.
 
 Para clonar el proyecto desde github, ejecutar el siguiente comando:
 
@@ -34,5 +34,3 @@ Para ejecutar los test, ejecutar el comando:
 ```bash
 php artisan test
 ```
-
-Estructura del proyecto
