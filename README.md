@@ -12,7 +12,6 @@ Instalar las dependencias:
 
 ```bash
 composer install --ignore-platform-reqs
-composer require --dev laravel/dusk --ignore-platform-reqs
 ```
 
 Renombrar el archivo .env.example a .env y editar los datos de conexión a la base de datos y la url de la APP. En mi caso la url estara en 127.0.0.1:8000, usare MySQL localmente y la base de datos se llamará rebits_lab.
@@ -51,7 +50,6 @@ php artisan serve
 Instalar Dusk:
 
 ```bash
-composer require --dev laravel/dusk --ignore-platform-reqs
 php artisan dusk:install
 ```
 
