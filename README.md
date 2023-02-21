@@ -67,3 +67,53 @@ php artisan dusk:chrome-driver 109
 ```
 
 Nota: Para ejecutar las pruebas debe estar en ejecución el servidor de Laravel.
+
+## Estructura del proyecto
+
+```bash
+
+# Configuración de la app ('timezone' => 'America/Santiago')
+/config/app.php
+
+# modelo de la base de datos (softDeletes)
+/database/migrations/2023_02_19_212125_create_usuarios_table.php
+/database/migrations/2023_02_19_212438_create_vehiculos_table.php
+/database/migrations/2023_02_19_212457_create_historicos_table.php
+
+# Modelos (softDeletes)
+/app/Models/Usuario.php
+/app/Models/Vehiculo.php
+/app/Models/Historico.php
+
+# Controladores (modelos -> vistas)
+/app/Http/Controllers/UsuarioController.php
+/app/Http/Controllers/VehiculoController.php
+
+# Vistas
+/resources/views/layouts/master.blade.php # Plantilla base
+/resources/views/index.blade.php # Pagina de inicio
+/resources/views/usuarios/index.blade.php # Listado de usuarios
+/resources/views/usuarios/create.blade.php # Formulario de creación de usuarios
+/resources/views/usuarios/edit.blade.php # Formulario de edición de usuarios
+/resources/views/usuarios/show.blade.php # Detalle de usuario
+/resources/views/vehiculos/index.blade.php # Listado de vehiculos
+/resources/views/vehiculos/create.blade.php # Formulario de creación de vehiculos
+/resources/views/vehiculos/edit.blade.php # Formulario de edición de vehiculos
+/resources/views/vehiculos/show.blade.php # Detalle de vehiculo
+
+# Rutas
+/routes/web.php
+
+# Pruebas funcionales con Dusk
+/tests/Browser/RebitsTest.php
+
+# Configuracion del proyecto
+/composer.json
+
+# Variables de entorno
+/.env
+
+# README
+/README.md
+
+```

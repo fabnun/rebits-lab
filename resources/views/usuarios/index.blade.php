@@ -14,16 +14,16 @@
             @foreach($usuarios as $usuarios)
                 <tr>
                     <td>{{ $usuarios->id }}</td>
-                    <td><a title="Ver"  href="{{ route('usuarios.show', $usuarios->id) }}" class="btn btn-info">{{ $usuarios->nombre }} {{ $usuarios->apellidos }}</a></td>
+                    <td><a title="Ver"  href="{{ route('usuarios.show', $usuarios->id) }}">{{ $usuarios->nombre }} {{ $usuarios->apellidos }}</a></td>
                     <td class="hide-mobile">{{ $usuarios->correo }}</td>
                     <td>
                         
                         <form action="{{ route('usuarios.destroy', $usuarios->id) }}" method="POST" class="d-inline">
-                            <a title="Ver" class="button" href="{{ route('usuarios.show', $usuarios->id) }}" class="btn btn-info">◉</a>
+                            <a title="Ver" class="button" href="{{ route('usuarios.show', $usuarios->id) }}">◉</a>
                             <a title="Editar" class="button" href="{{ route('usuarios.edit', $usuarios->id) }}" >✎</a>
                             @csrf
                             @method('DELETE')
-                            <button title="Borrar" onclick="if (!confirm('Confirme Borrar')) event.preventDefault()" class="button" type="submit" class="btn btn-danger">✖</button>
+                            <button title="Borrar" onclick="if (!confirm('Confirme Borrar')) event.preventDefault()" class="button" type="submit">✖</button>
                         </form>
                     </td>
                 </tr>

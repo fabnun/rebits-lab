@@ -22,7 +22,7 @@ class VehiculoController extends Controller
         return view('vehiculos.create', ['usuarios' => $usuarios]);
     }
 
-    public function store(Request $request)    {
+    public function store(Request $request) {
 
         // Crear el vehículo con los datos proporcionados por el usuario
         $vehiculo = new Vehiculo;
