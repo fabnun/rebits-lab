@@ -1,6 +1,6 @@
 # REBITS LAB
 
-Para este laboratorio usé Xampp para contar con PHP, MySQL, PHPMyAdmin y Apache. Tambien instalé Composer y Laravel. Y el entorno de desarrollo que usé fue Windows 10.
+Para este laboratorio usé Xampp para contar con PHP, MySQL, PHPMyAdmin y Apache. También instalé Composer y Laravel. Y el entorno de desarrollo que usé fue Windows 10.
 
 Clonar el proyecto desde github e ingresar al directorio:
 
@@ -15,7 +15,7 @@ Instalar las dependencias:
 composer install --ignore-platform-reqs
 ```
 
-Renombrar el archivo .env.example a .env y editar los datos de conexión a la base de datos y la url de la APP. En mi caso la url estara en 127.0.0.1:8000, usare MySQL localmente y la base de datos se llamará rebits_lab.
+Renombrar el archivo .env.example a .env y editar los datos de conexión a la base de datos y la url de la APP. En mi caso la url estará en 127.0.0.1:8000, usaré MySQL localmente y la base de datos se llamará rebits_lab.
 
 ```properties
 APP_URL=http://127.0.0.1:8000
@@ -54,7 +54,7 @@ Ejecutar las pruebas:
 php artisan dusk
 ```
 
-Si lanza un error del tipo:
+Sí lanza un error del tipo:
 
 ```error
 Current browser version is 109.0.5414.122 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
