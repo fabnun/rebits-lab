@@ -28,7 +28,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Finalmente creamos los datos de la base de datos:
+Ejecutar la migracion para crear la estructura de la base de datos:
 
 ```bash
 php artisan migrate
