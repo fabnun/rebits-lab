@@ -1,6 +1,6 @@
 # REBITS LAB
 
-Para este laboratorio usé Xampp para contar con PHP, MySQL, PHPMyAdmin y Apache. Tambien instalé Composer y Laravel. Y el entorno de desarrollo es Windows 10.
+Para este laboratorio usé Xampp para contar con PHP, MySQL, PHPMyAdmin y Apache. Tambien instalé Composer y Laravel. Y el entorno de desarrollo que usé fue Windows 10.
 
 Clonar el proyecto desde github e ingresar al directorio:
 
