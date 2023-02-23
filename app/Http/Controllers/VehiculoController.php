@@ -54,7 +54,10 @@ class VehiculoController extends Controller
     }
 
     public function update(Request $request, $id)    {
+
         $vehiculo = Vehiculo::findOrFail($id);
+        $cambiaElDueño = ($vehiculo->dueno_id != $request->dueno);
+
         $vehiculo->marca = $request->marca;
         $vehiculo->modelo = $request->modelo;
         $vehiculo->anio = $request->anio;
@@ -62,10 +65,13 @@ class VehiculoController extends Controller
         $vehiculo->dueno_id = $request->dueno;
         $vehiculo->save();
     
-        $historico = new Historico();
-        $historico->vehiculo_id = $vehiculo->id;
-        $historico->usuario_id = $request->dueno;
-        $historico->save();
+        //Actualiza el historico solo si cambia de dueño
+        if ($cambiaElDueño) {        
+            $historico = new Historico();
+            $historico->vehiculo_id = $vehiculo->id;
+            $historico->usuario_id = $request->dueno;
+            $historico->save();
+        }
     
         return redirect()->route('vehiculos.index')->with('success', 'Vehículo actualizado correctamente');
     }
